@@ -8,7 +8,7 @@
 </p>
 
 ## Installation
-1. Clone project
+1. Clone project https://github.com/widz11/ddms-test.git
 2. composer install
 3. npm install
 4. cp .env-example .env (setup env)
