@@ -8,14 +8,22 @@
 </p>
 
 ## Installation
-1. Clone project https://github.com/widz11/ddms-test.git
-2. composer install
-3. npm install
-4. cp .env-example .env (setup env)
-5. php artisan migrate
-6. php artisan db:seed
-7. npm run dev
-8. php artisan serve
+1. git clone https://github.com/widz11/ddms-test.git
+2. git checkout master
+3. composer install
+4. npm install
+5. cp .env-example .env (setup env)
+6. php artisan migrate
+7. php artisan db:seed
+8. npm run dev
+9. php artisan serve
+
+## Answar Mysql
+1. Query for transaction last 7 days
+SELECT * FROM invoice AS i WHERE i.created_at >= DATE_SUB(NOW(), INTERVAL 1 DAY);
+
+2. Query for aggregation transaction each day
+SELECT DATE(i.created_at) AS date, SUM(i.amount_total) AS total FROM invoice AS i GROUP BY DATE(i.created_at);
 
 ## About Laravel
 
